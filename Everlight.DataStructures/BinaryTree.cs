@@ -17,6 +17,11 @@ namespace Everlight.DataStructures
 			Initialize(maxDepth);
 		}
 
+		public TreeNode GetRoot()
+		{
+			return _rootNode;
+		}
+
 		/// <summary>
 		/// Predict the index of unfilled node
 		/// </summary>
@@ -25,9 +30,11 @@ namespace Everlight.DataStructures
 			return PredictUnfilled(_rootNode).Value.Index;
 		}
 
-		public long RunThrough(int times)
+		public long RunThrough()
 		{
-			for (var index = 0; index < times; index++)
+			var leaveCount = (int)Math.Pow(2, _maxDepth);
+
+			for (var index = 0; index < leaveCount - 1; index++)
 			{
 				RunThrough(_rootNode);
 			}

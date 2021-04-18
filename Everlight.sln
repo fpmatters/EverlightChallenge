@@ -8,9 +8,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solutions Files", "Solution
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Everlight.DataStructures", "Everlight.DataStructures\Everlight.DataStructures.csproj", "{19188AAA-A111-49A3-B459-8626FC30659A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Everlight.DataStructures", "Everlight.DataStructures\Everlight.DataStructures.csproj", "{19188AAA-A111-49A3-B459-8626FC30659A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Everlight.Console", "Everlight.Console\Everlight.Console.csproj", "{5A7B8718-87F6-4C70-B7B0-826449004A92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Everlight.Console", "Everlight.Console\Everlight.Console.csproj", "{5A7B8718-87F6-4C70-B7B0-826449004A92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Everlight.UnitTests", "Everlight.UnitTests\Everlight.UnitTests.csproj", "{C6E8531D-54BC-4E67-96EA-38A693D59280}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -26,6 +28,10 @@ Global
 		{5A7B8718-87F6-4C70-B7B0-826449004A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A7B8718-87F6-4C70-B7B0-826449004A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A7B8718-87F6-4C70-B7B0-826449004A92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6E8531D-54BC-4E67-96EA-38A693D59280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6E8531D-54BC-4E67-96EA-38A693D59280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6E8531D-54BC-4E67-96EA-38A693D59280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6E8531D-54BC-4E67-96EA-38A693D59280}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,10 +12,10 @@ namespace EverlightChallenge
 
 			var predictedIndex = tree.PredictUnfilled();
 
-			var leaveCount = (int)Math.Pow(2, MaxDepth);
-			var actualIndex = tree.RunThrough(leaveCount - 1);
+			
+			var actualIndex = tree.RunThrough();
 
-			Console.WriteLine($"Predicted index {predictedIndex} and actual index {actualIndex}");
+			Console.WriteLine($"Predicted index {predictedIndex} and actual index {actualIndex} should be same.");
 		}
 	}
 }

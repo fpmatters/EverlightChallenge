@@ -2,7 +2,7 @@
 
 namespace Everlight.DataStructures
 {
-	internal class TreeNode
+	public class TreeNode
 	{
 		public TreeNode(int depth)
 		{
@@ -10,7 +10,7 @@ namespace Everlight.DataStructures
 			Depth = depth;
 		}
 
-		public NodeValue Value { get; private set; }
+		public NodeValue Value { get; set; }
 
 		public TreeNode Left { get; set; }
 		public TreeNode Right { get; set; }
@@ -28,7 +28,7 @@ namespace Everlight.DataStructures
 		}
 	}
 
-	internal class NodeValue
+	public class NodeValue
 	{
 		public NodeValue()
 		{
