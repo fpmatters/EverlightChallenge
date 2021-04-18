@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31129.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solutions Files", "Solutions Files", "{BBD1D149-C75E-40DA-BB13-419653923366}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Everlight.DataStructures", "Everlight.DataStructures\Everlight.DataStructures.csproj", "{19188AAA-A111-49A3-B459-8626FC30659A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Everlight.Console", "Everlight.Console\Everlight.Console.csproj", "{5A7B8718-87F6-4C70-B7B0-826449004A92}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{19188AAA-A111-49A3-B459-8626FC30659A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19188AAA-A111-49A3-B459-8626FC30659A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19188AAA-A111-49A3-B459-8626FC30659A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19188AAA-A111-49A3-B459-8626FC30659A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A7B8718-87F6-4C70-B7B0-826449004A92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A7B8718-87F6-4C70-B7B0-826449004A92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A7B8718-87F6-4C70-B7B0-826449004A92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A7B8718-87F6-4C70-B7B0-826449004A92}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C8A4ACA7-7540-492F-AB5F-8A273491DE02}
+	EndGlobalSection
+EndGlobal

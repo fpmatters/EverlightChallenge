@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EverlightChallenge
+namespace Everlight.DataStructures
 {
 	public class BinaryTree
 	{

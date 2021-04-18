@@ -1,4 +1,5 @@
 ﻿using System;
+using Everlight.DataStructures;
 
 namespace EverlightChallenge
 {
