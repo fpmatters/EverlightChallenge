@@ -4,7 +4,7 @@ namespace Everlight.DataStructures
 {
 	public class BinaryTree
 	{
-		private long leaveNodeIndex = 1;
+		private long _leaveNodeIndex = 1;
 		private int _maxDepth;
 
 		private TreeNode _rootNode;
@@ -12,7 +12,7 @@ namespace Everlight.DataStructures
 		public BinaryTree(int maxDepth)
 		{
 			if (maxDepth <= 0)
-				throw new Exception("Max depth of binary tree must be greater than 0");
+				throw new Exception("Max depth of a binary tree must be greater than 0");
 
 			Initialize(maxDepth);
 		}
@@ -27,7 +27,8 @@ namespace Everlight.DataStructures
 		/// </summary>
 		public long PredictUnfilled()
 		{
-			return PredictUnfilled(_rootNode).Value.Index;
+			var unfilledNode = PredictUnfilled(_rootNode);
+			return unfilledNode.Value.Index;
 		}
 
 		public long RunThrough()
@@ -67,6 +68,7 @@ namespace Everlight.DataStructures
 		{
 			var index = -1L;
 
+			// Stop searching further if current node is at leave level
 			if (node.IsLeave())
 			{
 				if (!node.Value.Filled)
@@ -77,17 +79,14 @@ namespace Everlight.DataStructures
 				return index;
 			}
 
-			if (index > 0)
-			{
-				return index;
-			}
-
+			// Search the left child of current node recursively for unfilled node
 			index = FindUnfilled(node.Left);
 			if (index > 0)
 			{
 				return index;
 			}
 
+			// Search the right child of current node recursively
 			return FindUnfilled(node.Right);
 		}
 
@@ -103,12 +102,16 @@ namespace Everlight.DataStructures
 
 			if (node.Value.LeftOpen)
 			{
+				// There will be one moe ball going left, hence unfilled node will be in right branch
 				return PredictUnfilled(node.Right);
 			}
 
 			return PredictUnfilled(node.Left);
 		}
 
+		/// <summary>
+		/// Create a full binary tree recursively
+		/// </summary>
 		private void Initialize(int maxDepth)
 		{
 			_maxDepth = maxDepth;
@@ -136,7 +139,7 @@ namespace Everlight.DataStructures
 			}
 			else // For leave nodes
 			{
-				node.Value.Index = leaveNodeIndex++;
+				node.Value.Index = _leaveNodeIndex++;
 			}
 		}
 	}

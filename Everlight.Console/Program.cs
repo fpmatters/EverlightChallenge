@@ -5,7 +5,7 @@ namespace EverlightChallenge
 {
 	class Program
 	{
-		const int MaxDepth = 8;
+		const int MaxDepth = 15;
 		static void Main(string[] args)
 		{
 			var tree = new BinaryTree(MaxDepth);
