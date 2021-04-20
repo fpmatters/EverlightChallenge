@@ -4,7 +4,7 @@ namespace Everlight.DataStructures
 {
 	public class BinaryTree
 	{
-		private long _leaveNodeIndex = 1;
+		private long _leafNodeIndex = 1;
 		private int _maxDepth;
 
 		private TreeNode _rootNode;
@@ -33,9 +33,9 @@ namespace Everlight.DataStructures
 
 		public long RunThrough()
 		{
-			var leaveCount = (int)Math.Pow(2, _maxDepth);
+			var leafCount = (int)Math.Pow(2, _maxDepth);
 
-			for (var index = 0; index < leaveCount - 1; index++)
+			for (var index = 0; index < leafCount - 1; index++)
 			{
 				RunThrough(_rootNode);
 			}
@@ -45,13 +45,13 @@ namespace Everlight.DataStructures
 
 		private void RunThrough(TreeNode node)
 		{
-			if (node.IsLeave())
+			if (node.IsLeaf())
 			{
 				node.Value.Filled = true;
 				return;
 			}
 
-			// For non-leave nodes
+			// For non-leaf nodes
 			if (node.Value.LeftOpen)
 			{
 				node.FlipGate();
@@ -68,8 +68,8 @@ namespace Everlight.DataStructures
 		{
 			var index = -1L;
 
-			// Stop searching further if current node is at leave level
-			if (node.IsLeave())
+			// Stop searching further if current node is at leaf level
+			if (node.IsLeaf())
 			{
 				if (!node.Value.Filled)
 				{
@@ -95,7 +95,7 @@ namespace Everlight.DataStructures
 		/// </summary>
 		private TreeNode PredictUnfilled(TreeNode node)
 		{
-			if (node.IsLeave())
+			if (node.IsLeaf())
 			{
 				return node;
 			}
@@ -122,7 +122,7 @@ namespace Everlight.DataStructures
 
 		private void Add(TreeNode node)
 		{
-			if (node.Depth < _maxDepth) // For non-leave nodes
+			if (node.Depth < _maxDepth) // For non-leaf nodes
 			{
 				if (node.Left == null)
 				{
@@ -137,9 +137,9 @@ namespace Everlight.DataStructures
 				Add(node.Left);
 				Add(node.Right);
 			}
-			else // For leave nodes
+			else // For leaf nodes
 			{
-				node.Value.Index = _leaveNodeIndex++;
+				node.Value.Index = _leafNodeIndex++;
 			}
 		}
 	}

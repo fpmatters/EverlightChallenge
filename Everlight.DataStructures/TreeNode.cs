@@ -17,7 +17,7 @@ namespace Everlight.DataStructures
 
 		public int Depth { get; }
 
-		public bool IsLeave()
+		public bool IsLeaf()
 		{
 			return (Left == null) && (Right == null);
 		}
@@ -35,9 +35,9 @@ namespace Everlight.DataStructures
 			LeftOpen = new Random().Next(2) == 0;
 		}
 
-		public bool LeftOpen { get; set; } // For non-leave nodes
+		public bool LeftOpen { get; set; } // For non-leaf nodes
 
-		public long Index { get; set; } // To distinguish leave nodes
-		public bool Filled { get; set; } // For leave nodes
+		public long Index { get; set; } // To distinguish leaf nodes
+		public bool Filled { get; set; } // For leaf nodes
 	}
 }
